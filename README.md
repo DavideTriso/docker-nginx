@@ -28,9 +28,9 @@ E.g.:
 docker push davidetriso/nginx:nginx-stable
 ```
 
-###  Build and push everything
+###  Build and push
 
-Execute the `./build-and-push.sh` script to build and push all images to Docker Hub at once.
+Execute the `./build-and-push.sh` script to build and push the image Docker Hub at once.
 
 ## How to use
 
