@@ -34,7 +34,7 @@ Execute the `./build-and-push.sh` script to build and push the image to Docker H
 
 ## How to use this image
 
-This image is created starting from the official Nginx Docker image. Look at the "How to use this image section" of the [official image readme](https://hub.docker.com/_/nginx) to learn how to configure and use this image.
+This image is created starting from the official Nginx Docker image. Look at the "How to use this image" section of the [official image readme](https://hub.docker.com/_/nginx) to learn how to configure and use this image.
 
 ## Auto-reloading
 
