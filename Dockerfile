@@ -1,4 +1,6 @@
-FROM    nginx:stable
+ARG     TAG=stable-alpine
+
+FROM    nginx:$TAG
 
 USER    root
 
@@ -8,7 +10,6 @@ COPY    ./docker-entrypoint.d/999-autoreload.sh /docker-entrypoint.d/999-autorel
 
 RUN     chmod +x /docker-entrypoint.d/999-autoreload.sh \
         && mkdir -p /etc/letsencrypt/live \
-        && apt-get update \
-        && apt-get install -yq --no-install-recommends \
-            apt-utils \
+        && apk update \
+        && apk add --update --no-cache \
             inotify-tools
