@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAGS=("stable-alpine" "1.24.0-alpine")
+TAGS=("stable-alpine" "1.24.0-alpine" "1.25.1-alpine")
 
 for tag in "${TAGS[@]}"
 do
