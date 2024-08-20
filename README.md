@@ -7,19 +7,14 @@ Image to run the Nginx webserver in docker with **auto-reloading on config and S
 ### Build the image:
 
 ```
-docker build -t davidetriso/nginx:[tagname] .
+docker buildx build --push --tag davidetriso/nginx:[tagname] --build-arg TAG=[original-image-tag] --output type=image --platform linux/arm64,linux/amd64 .
 ```
 
 E.g.:
 
 ```
-docker build -t davidetriso/nginx:nginx-stable .
-```
+docker buildx build --push --tag davidetriso/nginx:1.24.0-alpine --build-arg TAG=1.24.0-alpine --output type=image --platform linux/arm64,linux/amd64 .
 
-> NOTE: By default the image is built `FROM` the `nginx:stable-alpine` official Docker image. However, if you want to build the image with a specific Nginx target version, you can change the TAG argument:
-
-```
- docker build -t davidetriso/nginx:1.25.1-alpine --build-arg TAG=1.25.1-alpine . 
 ```
 
 ### Push image to Docker Hub
